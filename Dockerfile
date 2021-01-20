@@ -52,7 +52,7 @@ RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
 	&& adduser -D -S -h /var/cache/nginx -s /sbin/nologin -G nginx nginx \
 	&& apk update \
 	&& apk add --no-cache --virtual .build-deps \
-		gcc=7.3.0 \
+		gcc=gcc-8.3.0-r0 \
 		libc-dev \
 		make \
 		openssl-dev \
@@ -60,7 +60,6 @@ RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
 		zlib-dev \
 		linux-headers \
 		curl \
-		gnupg \
 		gnupg1 \
 		libxslt-dev \
 		gd-dev \
