@@ -1,4 +1,4 @@
-from node:8.16-alpine
+from node:10.23.1-alpine3.9
 
 ENV NGINX_VERSION 1.14.1
 
