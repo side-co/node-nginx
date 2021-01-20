@@ -41,7 +41,7 @@ RUN set -x \
             && tempDir="$(mktemp -d)" \
             && chown nobody:nobody $tempDir \
             && apk add --no-cache --virtual .build-deps \
-                gcc \
+                gcc=7.3.0 \
                 libc-dev \
                 make \
                 openssl-dev \
