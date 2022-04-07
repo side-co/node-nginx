@@ -1,4 +1,4 @@
-from node:14.17.0-alpine3.13
+FROM node:14.17.0-alpine3.13
 
 ENV NGINX_VERSION 1.19.6
 ENV NJS_VERSION   0.5.0
@@ -101,13 +101,7 @@ RUN set -x \
     && apk add --no-cache curl ca-certificates \
 # forward request and error logs to docker log collector
     && ln -sf /dev/stdout /var/log/nginx/access.log \
-    && ln -sf /dev/stderr /var/log/nginx/error.log \
-# create a docker-entrypoint.d directory
-    && mkdir /docker-entrypoint.d
-
-COPY docker-entrypoint.sh /
-
-ENTRYPOINT ["/docker-entrypoint.sh"]
+    && ln -sf /dev/stderr /var/log/nginx/error.log 
 
 EXPOSE 80
 
