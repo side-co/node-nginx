@@ -1,4 +1,4 @@
-FROM node:18.12-alpine3.17
+FROM node:24.11.1-alpine3.22
 
 ENV NGINX_VERSION 1.23.3
 ENV NJS_VERSION   0.7.9
